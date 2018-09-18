@@ -1,0 +1,84 @@
+%%GIF histogram
+gif= imread('ราม.gif');
+subplot(5,4,1);
+imhist(gif);
+title('GIF');
+subplot(5,4,2);
+imshow(gif);
+title('GIF');
+%%JPG histogram
+jpg= imread('ราม.jpg');
+jpg= rgb2gray(jpg);
+subplot(5,4,5);
+imhist(jpg);
+title('JPG');
+subplot(5,4,6);
+imshow(jpg);
+title('JPG');
+%%BMP histogram
+bmp= imread('ราม.bmp');
+bmp= rgb2gray(bmp);
+subplot(5,4,9);
+imhist(bmp);
+title('BMP');
+subplot(5,4,10);
+imshow(bmp);
+title('BMP');
+%%PNG histogram
+png= imread('ราม.png');
+png= rgb2gray(png);
+subplot(5,4,13);
+imhist(png);
+title('PNG');
+subplot(5,4,14);
+imshow(png);
+title('PNG');
+%%TIFF histogram
+tiff= imread('ราม.tiff');
+tiff= rgb2gray(tiff);
+subplot(5,4,17);
+imhist(tiff);
+title('TIFF');
+subplot(5,4,18);
+imshow(tiff);
+title('TIFF');
+%%Equalization GIF (Improve contrast)
+subplot(5,4,3);
+egif=histeq(gif);
+imhist(egif);
+title('EqualGIF');
+subplot(5,4,4);
+imshow(egif);
+title('EqualGIF');
+%%Equalization JPG (Improve contrast)
+subplot(5,4,7);
+ejpg=histeq(jpg);
+imhist(ejpg);
+title('EqualJPG');
+subplot(5,4,8);
+imshow(ejpg);
+title('EqualJPG');
+%%Equalization BMP (Improve contrast)
+subplot(5,4,11);
+ebmp=histeq(bmp);
+imhist(ebmp);
+title('EqualBMP');
+subplot(5,4,12);
+imshow(ebmp);
+title('EqualBMP');
+%%Equalization PNG (Improve contrast)
+subplot(5,4,15);
+epng=histeq(png);
+imhist(epng);
+title('EqualPNG');
+subplot(5,4,16);
+imshow(epng);
+title('EqualPNG');
+%%Equalization TIFF (Improve contrast)
+subplot(5,4,19);
+etiff=histeq(tiff);
+imhist(etiff);
+title('EqualTIFF');
+subplot(5,4,20);
+imshow(etiff);
+title('EqualTIFF');
